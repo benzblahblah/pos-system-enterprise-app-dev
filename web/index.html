@@ -1,0 +1,2010 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>POS System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Latest compiled and minified CSS -->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link href="UI.css" rel="stylesheet" type="text/css"/>
+         <!-- JQuery-->
+         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+         
+    </head>
+    <body>
+        <div class="row">
+            <div style='margin-left: 10%;margin-right:10%;width:80%'>
+                
+                <div class='' style='background-color:lightblue; width:100%; height:200px'>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType1" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_1"><B>1</B></button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType1" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_1_E20">E20</button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType1" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_1_91">91</button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType1" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_1_95">95</button>
+                    </div>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType2" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_2"><B>2</B></button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType2" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_2_E20">E20</button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType2" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_2_91">91</button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType2" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_2_95">95</button>
+                    </div>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType3" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_3"><B>3</B></button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType3" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_3_Diesel">Diesel</button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType3" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_3_DieselPlus">Diesel+</button>
+                    </div>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType4" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_4"><B>4</B></button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType4" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_4_Diesel">Diesel</button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType4" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_4_DieselPlus">Diesel+</button>
+                    </div>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType5" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_5"><B>5</B></button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType5" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_5_E20">E20</button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType5" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_5_91">91</button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType5" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_5_95">95</button>
+                    </div>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType6" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_6"><B>6</B></button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType6" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_6_E20">E20</button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType6" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_6_91">91</button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType6" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_6_95">95</button>
+                    </div>
+                    
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType7" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_7"><B>7</B></button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType7" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_7_Diesel">Diesel</button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType7" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_7_DieselPlus">Diesel+</button>
+                    </div>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType8" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_8"><B>8</B></button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType8" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_8_Diesel">Diesel</button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType8" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_8_DieselPlus">Diesel+</button>
+                    </div>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType9" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_9"><B>9</B></button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType9" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_9_91">91</button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType9" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_9_95">95</button>
+                    </div>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType10" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_10"><B>10</B></button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType10" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_10_E20">E20</button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType10" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_10_91">91</button>
+                        <button type="button" class="btn btn-default col-md-4 selectedType10" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_10_95">95</button>
+                    </div>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType11" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_11"><B>11</B></button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType11" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_11_Diesel">Diesel</button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType11" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_11_DieselPlus">Diesel+</button>
+                    </div>
+                    <div class='col-md-2 topgrid' style ="padding-left: 0px;padding-right: 0px">
+                        <button type="button" class="btn btn-default col-md-12 selectedType12" style="background-color:greenyellow;height:30%;text-align: center;font-size:20px;border:2px solid black;padding-top: 0px" id="Ref_12"><B>12</B></button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType12" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_12_Diesel">Diesel</button>
+                        <button type="button" class="btn btn-default col-md-6 selectedType12" style="height:70px;text-align:center;font-size:20px;padding-top:15px;border:2px solid black" id="Ref_12_DieselPlus">Diesel+</button>
+                    </div> 
+                </div>
+                
+                <div class='col-md-12' style = "background-color:lightblue; width:100%; height:20px;padding-top:4.5px">
+                    <B style="margin-left: 7.5px" id="currentTime"></B>
+                    <B style="margin-left: 15px">Cashier <span id="NumOfCashier">1</span></B>
+                </div>
+                
+                <div class='col-md-6' style='height:420px; background-color:lightblue; padding:0px;padding-left:7.5px; padding-top:7.5px'>
+                    <div class='' style='width:100%; height:325px;border:1px solid gray; background-color: whitesmoke; overflow-y: scroll'>
+                         <table class="table" style='width:100%; background-color:whitesmoke; padding:0px; margin:0px;'>
+                                <thead>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th>Price</th>
+                                        <th>Price Per Litre</th>
+                                        <th>Total Litre</th>
+                                    </tr>
+                                </thead>
+                                <tbody id='listItem'></tbody>
+                        </table>
+                    </div>
+                    <div class='' style='width:100%;border:1px solid gray; background-color: whitesmoke; margin-top:7.5px; height:72px;'>
+                        <table class="table" style='width:100%; background-color:whitesmoke; padding:0px; margin:0px;'>
+                            <thead>
+                                <tr>
+                                    <th colspan="2" height='30px' style='font-size: 15; '>Total Price</th>
+                                    <th colspan='2' style='font-size: 15; text-align: center;' id = "totalPrice">0</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="1" height='30px' style='font-size: 15'>Total Sales (Shift)</th>
+                                    <th style='font-size: 15'>0</th>
+                                    <th colspan="1" height='30px' style='font-size: 15'>Total Sales (Day)</th>
+                                    <th style='font-size: 15'>0</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        </div>
+                </div>
+                
+                <div class='col-md-6' style='height:420px; background-color:lightblue; padding: 0px'> 
+                    <div style='width:66.6%;height:420px; padding:7.5px; margin:0px; float:left'>
+                         <textarea readonly style='width:100%;height:80px; resize:none; font-size: 50px; text-align: right;' id="textField">0</textarea>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="7">7</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="8">8</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="9">9</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="4">4</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="5">5</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="6">6</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="1">1</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="2">2</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="3">3</button>
+                         <button type="button" class="btn btn-default col-md-8 calBut" id="0">0</button>
+                         <button type="button" class="btn btn-default col-md-4 calBut" id="dotCal">.</button>
+                    </div>
+                    
+                    <div style='width:33.4%;height:420px; padding:7.5px;padding-left: 0px; margin:0px; float:left;' id='mainSelect'>
+                        <button type="button" class="btn btn-default col-md-6" style = "height:65px;border:1px solid gray;margin:0px;background-color:whitesmoke;font-size: 45px;padding-bottom: 0px" id="C">C</button>
+                        <button type="button" class="btn btn-default col-md-6" style = "height:65px;border:1px solid gray;margin:0px;background-color:whitesmoke;font-size: 20px;padding-bottom: 0px" id="Clear"><img src="Simpleicons_Interface_undo-arrow-in-a-circle.svg.png" style="width:50px"/></button>
+                        <button type="button" class="btn btn-default col-md-12" style="margin-top: 2px;height:125px;border:1px solid gray;background-color:whitesmoke;font-size: 45px" id="Enter">Enter</button>
+                        <button type="button" class="btn btn-default col-md-12" style="margin-top: 2px;height:210px;border:1px solid gray;background-color:whitesmoke;font-size: 30px" id="Cancel"><img src="cancel_black_192x192.png" style="width:150px"/></button>
+                        
+                        
+                    </div>
+                    
+                    <div style='width:33.4%;height:420px; padding:7.5px;padding-left: 0px; margin:0px; float:left;' id='paymentSelect'>
+
+                        <button type="button" class="btn btn-default col-md-12 payment" id="CreditCard">Credit Card</button>
+                        <button type="button" class="btn btn-default col-md-12 payment" id="CashCard">Cash Card</button>
+                        <button type="button" class="btn btn-default col-md-12 payment" id="Cash">Cash</button>
+                        <button type="button" class="btn btn-default col-md-12 cancel"><img src="Simpleicons_Interface_undo-arrow-in-a-circle.svg.png" style="width:50px"/></button>
+                    </div>
+                </div>
+                
+            </div>
+             
+        </div>
+        
+        <script>
+            var gas91 = 29.48;
+            var gas95 = 29.75;
+            var e20 = 27.24;
+            var diesel = 29.29;
+            var dieselPlus = 30.20;
+            var type = "";
+            var type1 = "";
+            var type2 = "";
+            var type3 = "";
+            var type4 = "";
+            var type5 = "";
+            var type6 = "";
+            var type7 = "";
+            var type8 = "";
+            var type9 = "";
+            var type10 = "";
+            var type11 = "";
+            var type12 = "";
+            var typeID = "";
+            var changeColorType1 = "";
+            var changeColorText1 = "";
+            var changeColorType2 = "";
+            var changeColorText2 = "";
+            var changeColorType3 = "";
+            var changeColorText3 = "";
+            var changeColorType4 = "";
+            var changeColorText4 = "";
+            var changeColorType5 = "";
+            var changeColorText5 = "";
+            var changeColorType6 = "";
+            var changeColorText6 = "";
+            var changeColorType7 = "";
+            var changeColorText7 = "";
+            var changeColorType8 = "";
+            var changeColorText8 = "";
+            var changeColorType9 = "";
+            var changeColorText9 = "";
+            var changeColorType10 = "";
+            var changeColorText10 = "";
+            var changeColorType11 = "";
+            var changeColorText11 = "";
+            var changeColorType12 = "";
+            var changeColorText12 = "";
+            var checkDot = true;
+            var totalPrice = 0;
+            var latestPrice = 0 ;
+            var count = 0;
+            var pumpPaying = ""
+ 
+            setInterval(function(){
+                var d = new Date(); 
+                $("#currentTime").html(d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds());},1000
+            );
+      
+            $("#typeSelect").hide();
+            $("#paymentSelect").hide();
+            
+            $("#Cancel").click(function(){
+                //alert(count);
+                if(count > 0)
+                {
+                    
+                    //var test = $("#listItem tr:last").find("td").eq(1).html();
+                    //var test = $("#listItem tr:last td:eq(1)").html();
+                    //alert(test);
+                    
+                    totalPrice = totalPrice - parseInt($("#listItem tr:last td:eq(1)").html());
+                    $("#totalPrice").html(totalPrice);
+                    $("#itemId" + (count-1)).remove();
+                    --count;
+                }
+            });
+            
+            $(".cancel").click(function(){
+                //$("#typeSelect").show();
+                $("#mainSelect").show();
+                $("#paymentSelect").hide();
+            });
+            
+            $(".payment").click(function(){
+                
+                var price = $("#textField").html();
+                latestPrice = price;
+                
+                if(price != 0)
+                {
+                    if(pumpPaying != "")
+                    {
+                        var selectedType;
+                        var perLitre;
+                        if(type == "Gas91")
+                        {
+                            selectedType = "Gasohol 91"
+                            perLitre = gas91;
+                        }
+                        else if(type == "Gas95")
+                        {
+                            selectedType = "Gasohol 95"
+                            perLitre = gas95;
+                        }
+                        else if(type == "Diesel")
+                        {
+                            selectedType = "Diesel";
+                            perLitre = diesel;
+                        }
+                        else if(type == "DieselPlus")
+                        {
+                            selectedType = "DieselPlus";
+                            perLitre = dieselPlus;
+                        }
+                        else
+                        {
+                            selectedType = "E20"
+                            perLitre = e20;
+                        }
+                        var ttliter =  parseFloat(price/perLitre).toFixed(2)
+                        $("#listItem").html($("#listItem").html()+"<tr id='"+ "itemId" +count +"'><td>"+ selectedType +"</td><td> "+ price +"</td><td>"+ perLitre +"</td><td>"+ ttliter +"</td></tr>");
+                        totalPrice +=  parseInt(price);
+                        count++;
+                        typeID = ""
+                        if(pumpPaying == "Ref_1")
+                        {
+                            $("#"+pumpPaying).text("1")
+                            $("#"+changeColorText1).css("background-color", "greenyellow");
+                            $("#"+changeColorType1).css("background-color", "whitesmoke");
+                            changeColorType1 = ""
+                            changeColorText1 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_2")
+                        {
+                            $("#"+pumpPaying).text("2")
+                            $("#"+changeColorText2).css("background-color", "greenyellow");
+                            $("#"+changeColorType2).css("background-color", "whitesmoke");
+                            changeColorType2 = ""
+                            changeColorText2 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_3")
+                        {
+                            $("#"+pumpPaying).text("3")
+                            $("#"+changeColorText3).css("background-color", "greenyellow");
+                            $("#"+changeColorType3).css("background-color", "whitesmoke");
+                            changeColorType3 = ""
+                            changeColorText3 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_4")
+                        {
+                            $("#"+pumpPaying).text("4")
+                            $("#"+changeColorText4).css("background-color", "greenyellow");
+                            $("#"+changeColorType4).css("background-color", "whitesmoke");
+                            changeColorType4 = ""
+                            changeColorText4 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_5")
+                        {
+                            $("#"+pumpPaying).text("5")
+                            $("#"+changeColorText5).css("background-color", "greenyellow");
+                            $("#"+changeColorType5).css("background-color", "whitesmoke");
+                            changeColorType5 = ""
+                            changeColorText5 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_6")
+                        {
+                            $("#"+pumpPaying).text("6")
+                            $("#"+changeColorText6).css("background-color", "greenyellow");
+                            $("#"+changeColorType6).css("background-color", "whitesmoke");
+                            changeColorType6 = ""
+                            changeColorText6 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_7")
+                        {
+                            $("#"+pumpPaying).text("7")
+                            $("#"+changeColorText7).css("background-color", "greenyellow");
+                            $("#"+changeColorType7).css("background-color", "whitesmoke");
+                            changeColorType7 = ""
+                            changeColorText7 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_8")
+                        {
+                            $("#"+pumpPaying).text("8")
+                            $("#"+changeColorText8).css("background-color", "greenyellow");
+                            $("#"+changeColorType8).css("background-color", "whitesmoke");
+                            changeColorType8 = ""
+                            changeColorText8 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_9")
+                        {
+                            $("#"+pumpPaying).text("9")
+                            $("#"+changeColorText9).css("background-color", "greenyellow");
+                            $("#"+changeColorType9).css("background-color", "whitesmoke");
+                            changeColorType9 = ""
+                            changeColorText9 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_10")
+                        {
+                            $("#"+pumpPaying).text("10")
+                            $("#"+changeColorText10).css("background-color", "greenyellow");
+                            $("#"+changeColorType10).css("background-color", "whitesmoke");
+                            changeColorType10 = ""
+                            changeColorText10 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_11")
+                        {
+                            $("#"+pumpPaying).text("11")
+                            $("#"+changeColorText11).css("background-color", "greenyellow");
+                            $("#"+changeColorType11).css("background-color", "whitesmoke");
+                            changeColorType11 = ""
+                            changeColorText11 = ""
+                            pumpPaying = ""
+                        }
+                        else if(pumpPaying == "Ref_12")
+                        {
+                            $("#"+pumpPaying).text("12")
+                            $("#"+changeColorText12).css("background-color", "greenyellow");
+                            $("#"+changeColorType12).css("background-color", "whitesmoke");
+                            changeColorType12 = ""
+                            changeColorText12 = ""
+                            pumpPaying = ""
+                        }
+                        $("#totalPrice").html(totalPrice);
+                        $("#textField").html("0");
+                        $("#mainSelect").show();
+                        $("#paymentSelect").hide();
+                    }
+                    else
+                    {
+                        alert("Please select pump to pay");
+                    }
+                } 
+                else
+                {
+                    alert("Price is 0");
+                    $("#mainSelect").show();
+                    $("#paymentSelect").hide();
+                }
+            });
+            
+            $(".selectedType1").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_1_E20")
+                {
+                    if(changeColorType1 == "" && changeColorText1 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_1")
+                        {
+                            $("#Ref_1").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_1").css("background-color", "yellow");
+                        }
+                        
+                        $("#Ref_1_E20").css("background-color", "red");
+                        changeColorType1 = "Ref_1_E20"
+                        changeColorText1 = "Ref_1"
+                    }
+                    else if(changeColorType1 == "Ref_1_E20" && changeColorText1 == "Ref_1")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_1")
+                        {
+                            $("#Ref_1").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_1").css("background-color", "yellow");
+                        }
+                        $("#Ref_1").css("background-color", "red");
+                        $("#Ref_1_E20").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText1).css("background-color", "greenyellow");
+                        $("#"+changeColorType1).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_1")
+                        {
+                            $("#Ref_1").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_1").css("background-color", "yellow");
+                        }
+                        $("#Ref_1_E20").css("background-color", "red");
+                        changeColorType1 = "Ref_1_E20"
+                        changeColorText1 = "Ref_1"
+                    }
+             
+                    type1 = "E20"
+                }
+                else if(typeID == "Ref_1_91")
+                {
+                    if(changeColorType1 == "" && changeColorText1 == "")
+                    {
+                        if(pumpPaying == ""|| pumpPaying != "Ref_1")
+                        {
+                            $("#Ref_1").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_1").css("background-color", "yellow");
+                        }
+                        $("#Ref_1_91").css("background-color", "red");
+                        changeColorType1 = "Ref_1_91"
+                        changeColorText1 = "Ref_1"
+                    }
+                    else if(changeColorType1 == "Ref_1_91" && changeColorText1 == "Ref_1")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_1")
+                        {
+                            $("#Ref_1").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_1").css("background-color", "yellow");
+                        }
+                        $("#Ref_1_91").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText1).css("background-color", "greenyellow");
+                        $("#"+changeColorType1).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_1")
+                        {
+                            $("#Ref_1").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_1").css("background-color", "yellow");
+                        }
+                        $("#Ref_1_91").css("background-color", "red");
+                        changeColorType1 = "Ref_1_91"
+                        changeColorText1 = "Ref_1"
+                    }
+                    type1 = "Gas91"
+                }
+                else if(typeID == "Ref_1_95")
+                {
+                    if(changeColorType1 == "" && changeColorText1 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_1")
+                        {
+                            $("#Ref_1").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_1").css("background-color", "yellow");
+                        }
+                        $("#Ref_1_95").css("background-color", "red");
+                        changeColorType1 = "Ref_1_95"
+                        changeColorText1 = "Ref_1"
+                    }
+                    else if(changeColorType1 == "Ref_1_95" && changeColorText1 == "Ref_1")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_1")
+                        {
+                            $("#Ref_1").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_1").css("background-color", "yellow");
+                        }
+                        $("#Ref_1_95").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText1).css("background-color", "greenyellow");
+                        $("#"+changeColorType1).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_1")
+                        {
+                            $("#Ref_1").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_1").css("background-color", "yellow");
+                        }
+                        $("#Ref_1_95").css("background-color", "red");
+                        changeColorType1 = "Ref_1_95"
+                        changeColorText1 = "Ref_1"
+                    }
+                    type1 = "Gas95"
+                }      
+            });
+            
+            $(".selectedType2").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_2_E20")
+                {
+                    if(changeColorType2 == "" && changeColorText2 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_2")
+                        {
+                            $("#Ref_2").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_2").css("background-color", "yellow");
+                        }
+                        $("#Ref_2_E20").css("background-color", "red");
+                        changeColorType2 = "Ref_2_E20"
+                        changeColorText2 = "Ref_2"
+                    }
+                    else if(changeColorType2 == "Ref_2_E20" && changeColorText2 == "Ref_2")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_2")
+                        {
+                            $("#Ref_2").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_2").css("background-color", "yellow");
+                        }
+                        $("#Ref_2_E20").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText2).css("background-color", "greenyellow");
+                        $("#"+changeColorType2).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_2")
+                        {
+                            $("#Ref_2").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_2").css("background-color", "yellow");
+                        }
+                        $("#Ref_2_E20").css("background-color", "red");
+                        changeColorType2 = "Ref_2_E20"
+                        changeColorText2 = "Ref_2"
+                    }
+                    type2 = "E20"
+                }
+                else if(typeID == "Ref_2_91")
+                {
+                    if(changeColorType2 == "" && changeColorText2 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_2")
+                        {
+                            $("#Ref_2").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_2").css("background-color", "yellow");
+                        }
+                        $("#Ref_2_91").css("background-color", "red");
+                        changeColorType2 = "Ref_2_91"
+                        changeColorText2 = "Ref_2"
+                    }
+                    else if(changeColorType2 == "Ref_2_91" && changeColorText2 == "Ref_2")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_2")
+                        {
+                            $("#Ref_2").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_2").css("background-color", "yellow");
+                        }
+                        $("#Ref_2_91").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText2).css("background-color", "greenyellow");
+                        $("#"+changeColorType2).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_2")
+                        {
+                            $("#Ref_2").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_2").css("background-color", "yellow");
+                        }
+                        $("#Ref_2_91").css("background-color", "red");
+                        changeColorType2 = "Ref_2_91"
+                        changeColorText2 = "Ref_2"
+                    }
+                    type2 = "Gas91"
+                }
+                else if(typeID == "Ref_2_95")
+                {
+                    if(changeColorType2 == "" && changeColorText2 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_2")
+                        {
+                            $("#Ref_2").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_2").css("background-color", "yellow");
+                        }
+                        $("#Ref_2_95").css("background-color", "red");
+                        changeColorType2 = "Ref_2_95"
+                        changeColorText2 = "Ref_2"
+                    }
+                    else if(changeColorType2 == "Ref_2_95" && changeColorText2 == "Ref_2")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_2")
+                        {
+                            $("#Ref_2").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_2").css("background-color", "yellow");
+                        }
+                        $("#Ref_2_95").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText2).css("background-color", "greenyellow");
+                        $("#"+changeColorType2).css("background-color", "whitesmoke");
+                        if(pumpPaying == ""|| pumpPaying != "Ref_2")
+                        {
+                            $("#Ref_2").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_2").css("background-color", "yellow");
+                        }
+                        $("#Ref_2_95").css("background-color", "red");
+                        changeColorType2 = "Ref_2_95"
+                        changeColorText2 = "Ref_2"
+                    }
+                    type2 = "Gas95"
+                }
+            });
+            
+            $(".selectedType3").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_3_Diesel")
+                {
+                    if(changeColorType3 == "" && changeColorText3 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_3")
+                        {
+                            $("#Ref_3").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_3").css("background-color", "yellow");
+                        }
+                        $("#Ref_3_Diesel").css("background-color", "red");
+                        changeColorType3 = "Ref_3_Diesel"
+                        changeColorText3 = "Ref_3"
+                    }
+                    else if(changeColorType3 == "Ref_3_Diesel" && changeColorText3 == "Ref_3")
+                    {
+                        if(pumpPaying == ""|| pumpPaying != "Ref_3")
+                        {
+                            $("#Ref_3").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_3").css("background-color", "yellow");
+                        }
+                        $("#Ref_3_Diesel").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText3).css("background-color", "greenyellow");
+                        $("#"+changeColorType3).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_3")
+                        {
+                            $("#Ref_3").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_3").css("background-color", "yellow");
+                        }
+                        $("#Ref_3_Diesel").css("background-color", "red");
+                        changeColorType3 = "Ref_3_Diesel"
+                        changeColorText3 = "Ref_3"
+                    }
+                    
+                    type3 = "Diesel"
+                }
+                else if(typeID == "Ref_3_DieselPlus")
+                {
+                    if(changeColorType3 == "" && changeColorText3 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_3")
+                        {
+                            $("#Ref_3").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_3").css("background-color", "yellow");
+                        }
+                        $("#Ref_3_DieselPlus").css("background-color", "red");
+                        changeColorType3 = "Ref_3_DieselPlus"
+                        changeColorText3 = "Ref_3"
+                    }
+                    else if(changeColorType3 == "Ref_3_DieselPlus" && changeColorText3 == "Ref_3")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_3")
+                        {
+                            $("#Ref_3").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_3").css("background-color", "yellow");
+                        }
+                        $("#Ref_3_DieselPlus").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText3).css("background-color", "greenyellow");
+                        $("#"+changeColorType3).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_3")
+                        {
+                            $("#Ref_3").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_3").css("background-color", "yellow");
+                        }
+                        $("#Ref_3_DieselPlus").css("background-color", "red");
+                        changeColorType3 = "Ref_3_DieselPlus"
+                        changeColorText3 = "Ref_3"
+                    }
+                    type3 = "DieselPlus"
+                }
+            });
+            
+            $(".selectedType4").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_4_Diesel")
+                {
+                    if(changeColorType4 == "" && changeColorText4 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_4")
+                        {
+                            $("#Ref_4").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_4").css("background-color", "yellow");
+                        }
+                        $("#Ref_4_Diesel").css("background-color", "red");
+                        changeColorType4 = "Ref_4_Diesel"
+                        changeColorText4 = "Ref_4"
+                    }
+                    else if(changeColorType4 == "Ref_4_Diesel" && changeColorText4 == "Ref_4")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_4")
+                        {
+                            $("#Ref_4").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_4").css("background-color", "yellow");
+                        }
+                        $("#Ref_4_Diesel").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText4).css("background-color", "greenyellow");
+                        $("#"+changeColorType4).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_4")
+                        {
+                            $("#Ref_4").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_4").css("background-color", "yellow");
+                        }
+                        $("#Ref_4_Diesel").css("background-color", "red");
+                        changeColorType4 = "Ref_4_Diesel"
+                        changeColorText4 = "Ref_4"
+                    }
+                    type4 = "Diesel"
+                }
+                else if(typeID == "Ref_4_DieselPlus")
+                {
+                    if(changeColorType4 == "" && changeColorText4 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_4")
+                        {
+                            $("#Ref_4").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_4").css("background-color", "yellow");
+                        }
+                        $("#Ref_4_DieselPlus").css("background-color", "red");
+                        changeColorType4 = "Ref_4_DieselPlus"
+                        changeColorText4 = "Ref_4"
+                    }
+                    else if(changeColorType4 == "Ref_4_DieselPlus" && changeColorText4 == "Ref_4")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_4")
+                        {
+                            $("#Ref_4").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_4").css("background-color", "yellow");
+                        }
+                        $("#Ref_4_DieselPlus").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText4).css("background-color", "greenyellow");
+                        $("#"+changeColorType4).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_4")
+                        {
+                            $("#Ref_4").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_4").css("background-color", "yellow");
+                        }
+                        $("#Ref_4_DieselPlus").css("background-color", "red");
+                        changeColorType4 = "Ref_4_DieselPlus"
+                        changeColorText4 = "Ref_4"
+                    }
+                    type4 = "DieselPlus"
+                }
+            });
+            
+            $(".selectedType5").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_5_E20")
+                {
+                    if(changeColorType5 == "" && changeColorText5 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_5")
+                        {
+                            $("#Ref_5").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_5").css("background-color", "yellow");
+                        }
+                        $("#Ref_5_E20").css("background-color", "red");
+                        changeColorType5 = "Ref_5_E20"
+                        changeColorText5 = "Ref_5"
+                    }
+                    else if(changeColorType5 == "Ref_5_E20" && changeColorText5 == "Ref_5")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_5")
+                        {
+                            $("#Ref_5").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_5").css("background-color", "yellow");
+                        }
+                        $("#Ref_5_E20").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText5).css("background-color", "greenyellow");
+                        $("#"+changeColorType5).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_5")
+                        {
+                            $("#Ref_5").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_5").css("background-color", "yellow");
+                        }
+                        $("#Ref_5_E20").css("background-color", "red");
+                        changeColorType5 = "Ref_5_E20"
+                        changeColorText5 = "Ref_5"
+                    }
+                    type5 = "E20"
+                }
+                else if(typeID == "Ref_5_91")
+                {
+                    if(changeColorType5 == "" && changeColorText5 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_5")
+                        {
+                            $("#Ref_5").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_5").css("background-color", "yellow");
+                        }
+                        $("#Ref_5_91").css("background-color", "red");
+                        changeColorType5 = "Ref_5_91"
+                        changeColorText5 = "Ref_5"
+                    }
+                    else if(changeColorType5 == "Ref_5_91" && changeColorText5 == "Ref_5")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_5")
+                        {
+                            $("#Ref_5").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_5").css("background-color", "yellow");
+                        }
+                        $("#Ref_5_91").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText5).css("background-color", "greenyellow");
+                        $("#"+changeColorType5).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_5")
+                        {
+                            $("#Ref_5").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_5").css("background-color", "yellow");
+                        }
+                        $("#Ref_5_91").css("background-color", "red");
+                        changeColorType5 = "Ref_5_91"
+                        changeColorText5 = "Ref_5"
+                    }
+                    type5 = "Gas91"
+                }
+                else if(typeID == "Ref_5_95")
+                {
+                    if(changeColorType5 == "" && changeColorText5 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_5")
+                        {
+                            $("#Ref_5").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_5").css("background-color", "yellow");
+                        }
+                        $("#Ref_5_95").css("background-color", "red");
+                        changeColorType5 = "Ref_5_95"
+                        changeColorText5 = "Ref_5"
+                    }
+                    else if(changeColorType5 == "Ref_5_95" && changeColorText5 == "Ref_5")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_5")
+                        {
+                            $("#Ref_5").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_5").css("background-color", "yellow");
+                        }
+                        $("#Ref_5_95").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText5).css("background-color", "greenyellow");
+                        $("#"+changeColorType5).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_5")
+                        {
+                            $("#Ref_5").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_5").css("background-color", "yellow");
+                        }
+                        $("#Ref_5_95").css("background-color", "red");
+                        changeColorType5 = "Ref_5_95"
+                        changeColorText5 = "Ref_5"
+                    }
+                    type5 = "Gas95"
+                }
+            });
+            
+            $(".selectedType6").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_6_E20")
+                {
+                    if(changeColorType6 == "" && changeColorText6 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_6")
+                        {
+                            $("#Ref_6").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_6").css("background-color", "yellow");
+                        }
+                        $("#Ref_6_E20").css("background-color", "red");
+                        changeColorType6 = "Ref_6_E20"
+                        changeColorText6 = "Ref_6"
+                    }
+                    else if(changeColorType6 == "Ref_6_E20" && changeColorText6 == "Ref_6")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_6")
+                        {
+                            $("#Ref_6").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_6").css("background-color", "yellow");
+                        }
+                        $("#Ref_6_E20").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText6).css("background-color", "greenyellow");
+                        $("#"+changeColorType6).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_6")
+                        {
+                            $("#Ref_6").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_6").css("background-color", "yellow");
+                        }
+                        $("#Ref_6_E20").css("background-color", "red");
+                        changeColorType6 = "Ref_6_E20"
+                        changeColorText6 = "Ref_6"
+                    }
+                    type6 = "E20"
+                }
+                else if(typeID == "Ref_6_91")
+                {
+                    if(changeColorType6 == "" && changeColorText6 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_6")
+                        {
+                            $("#Ref_6").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_6").css("background-color", "yellow");
+                        }
+                        $("#Ref_6_91").css("background-color", "red");
+                        changeColorType6 = "Ref_6_91"
+                        changeColorText6 = "Ref_6"
+                    }
+                    else if(changeColorType6 == "Ref_6_91" && changeColorText6 == "Ref_6")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_6")
+                        {
+                            $("#Ref_6").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_6").css("background-color", "yellow");
+                        }
+                        $("#Ref_6_91").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText6).css("background-color", "greenyellow");
+                        $("#"+changeColorType6).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_6")
+                        {
+                            $("#Ref_6").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_6").css("background-color", "yellow");
+                        }
+                        $("#Ref_6_91").css("background-color", "red");
+                        changeColorType6 = "Ref_6_91"
+                        changeColorText6 = "Ref_6"
+                    }
+                    type6 = "Gas91"
+                }
+                else if(typeID == "Ref_6_95")
+                {
+                    if(changeColorType6 == "" && changeColorText6 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_6")
+                        {
+                            $("#Ref_6").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_6").css("background-color", "yellow");
+                        }
+                        $("#Ref_6_95").css("background-color", "red");
+                        changeColorType6 = "Ref_6_95"
+                        changeColorText6 = "Ref_6"
+                    }
+                    else if(changeColorType6 == "Ref_6_95" && changeColorText6 == "Ref_6")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_6")
+                        {
+                            $("#Ref_6").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_6").css("background-color", "yellow");
+                        }
+                        $("#Ref_6_95").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText6).css("background-color", "greenyellow");
+                        $("#"+changeColorType6).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_6")
+                        {
+                            $("#Ref_6").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_6").css("background-color", "yellow");
+                        }
+                        $("#Ref_6_95").css("background-color", "red");
+                        changeColorType6 = "Ref_6_95"
+                        changeColorText6 = "Ref_6"
+                    }
+                    type6 = "Gas95"
+                }
+            });
+            
+            $(".selectedType7").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_7_Diesel")
+                {
+                    if(changeColorType7 == "" && changeColorText7 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_7")
+                        {
+                            $("#Ref_7").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_7").css("background-color", "yellow");
+                        }
+                        $("#Ref_7_Diesel").css("background-color", "red");
+                        changeColorType7 = "Ref_7_Diesel"
+                        changeColorText7 = "Ref_7"
+                    }
+                    else if(changeColorType7 == "Ref_7_Diesel" && changeColorText7 == "Ref_7")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_7")
+                        {
+                            $("#Ref_7").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_7").css("background-color", "yellow");
+                        }
+                        $("#Ref_7_Diesel").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText7).css("background-color", "greenyellow");
+                        $("#"+changeColorType7).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_7")
+                        {
+                            $("#Ref_7").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_7").css("background-color", "yellow");
+                        }
+                        $("#Ref_7_Diesel").css("background-color", "red");
+                        changeColorType7 = "Ref_7_Diesel"
+                        changeColorText7 = "Ref_7"
+                    }
+                    type7 = "Diesel"
+                }
+                else if(typeID == "Ref_7_DieselPlus")
+                {
+                    if(changeColorType7 == "" && changeColorText7 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_7")
+                        {
+                            $("#Ref_7").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_7").css("background-color", "yellow");
+                        }
+                        $("#Ref_7_DieselPlus").css("background-color", "red");
+                        changeColorType7 = "Ref_7_DieselPlus"
+                        changeColorText7 = "Ref_7"
+                    }
+                    else if(changeColorType7 == "Ref_7_DieselPlus" && changeColorText7 == "Ref_7")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_7")
+                        {
+                            $("#Ref_7").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_7").css("background-color", "yellow");
+                        }
+                        $("#Ref_7_DieselPlus").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText7).css("background-color", "greenyellow");
+                        $("#"+changeColorType7).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_7")
+                        {
+                            $("#Ref_7").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_7").css("background-color", "yellow");
+                        }
+                        $("#Ref_7_DieselPlus").css("background-color", "red");
+                        changeColorType7 = "Ref_7_DieselPlus"
+                        changeColorText7 = "Ref_7"
+                    }
+                    type7 = "DieselPlus"
+                }
+            });
+            
+            $(".selectedType8").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_8_Diesel")
+                {
+                    if(changeColorType8 == "" && changeColorText8 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_8")
+                        {
+                            $("#Ref_8").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_8").css("background-color", "yellow");
+                        }
+                        $("#Ref_8_Diesel").css("background-color", "red");
+                        changeColorType8 = "Ref_8_Diesel"
+                        changeColorText8 = "Ref_8"
+                    }
+                    else if(changeColorType8 == "Ref_8_Diesel" && changeColorText8 == "Ref_8")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_8")
+                        {
+                            $("#Ref_8").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_8").css("background-color", "yellow");
+                        }
+                        $("#Ref_8_Diesel").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText8).css("background-color", "greenyellow");
+                        $("#"+changeColorType8).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_8")
+                        {
+                            $("#Ref_8").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_8").css("background-color", "yellow");
+                        }
+                        $("#Ref_8_Diesel").css("background-color", "red");
+                        changeColorType8 = "Ref_8_Diesel"
+                        changeColorText8 = "Ref_8"
+                    }
+                    type8 = "Diesel"
+                }
+                else if(typeID == "Ref_8_DieselPlus")
+                {
+                    if(changeColorType8 == "" && changeColorText8 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_8")
+                        {
+                            $("#Ref_8").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_8").css("background-color", "yellow");
+                        }
+                        $("#Ref_8_DieselPlus").css("background-color", "red");
+                        changeColorType8 = "Ref_8_DieselPlus"
+                        changeColorText8 = "Ref_8"
+                    }
+                    else if(changeColorType8 == "Ref_8_DieselPlus" && changeColorText8 == "Ref_8")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_8")
+                        {
+                            $("#Ref_8").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_8").css("background-color", "yellow");
+                        }
+                        $("#Ref_8_DieselPlus").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText8).css("background-color", "greenyellow");
+                        $("#"+changeColorType8).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_8")
+                        {
+                            $("#Ref_8").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_8").css("background-color", "yellow");
+                        }
+                        $("#Ref_8_DieselPlus").css("background-color", "red");
+                        changeColorType8 = "Ref_8_DieselPlus"
+                        changeColorText8 = "Ref_8"
+                    }
+                    type8 = "DieselPlus"
+                }
+            });
+            
+            $(".selectedType9").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_9_91")
+                {
+                    if(changeColorType9 == "" && changeColorText9 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_9")
+                        {
+                            $("#Ref_9").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_9").css("background-color", "yellow");
+                        }
+                        $("#Ref_9_91").css("background-color", "red");
+                        changeColorType9 = "Ref_9_91"
+                        changeColorText9 = "Ref_9"
+                    }
+                    else if(changeColorType9 == "Ref_9_91" && changeColorText9 == "Ref_9")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_9")
+                        {
+                            $("#Ref_9").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_9").css("background-color", "yellow");
+                        }
+                        $("#Ref_9_91").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText9).css("background-color", "greenyellow");
+                        $("#"+changeColorType9).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_9")
+                        {
+                            $("#Ref_9").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_9").css("background-color", "yellow");
+                        }
+                        $("#Ref_9_91").css("background-color", "red");
+                        changeColorType9 = "Ref_9_91"
+                        changeColorText9 = "Ref_9"
+                    }
+                    type9 = "Gas91"
+                }
+                else if(typeID == "Ref_9_95")
+                {
+                    if(changeColorType9 == "" && changeColorText9 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_9")
+                        {
+                            $("#Ref_9").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_9").css("background-color", "yellow");
+                        }
+                        $("#Ref_9_95").css("background-color", "red");
+                        changeColorType9 = "Ref_9_95"
+                        changeColorText9 = "Ref_9"
+                    }
+                    else if(changeColorType9 == "Ref_9_95" && changeColorText9 == "Ref_9")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_9")
+                        {
+                            $("#Ref_9").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_9").css("background-color", "yellow");
+                        }
+                        $("#Ref_9_95").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText9).css("background-color", "greenyellow");
+                        $("#"+changeColorType9).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_9")
+                        {
+                            $("#Ref_9").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_9").css("background-color", "yellow");
+                        }
+                        $("#Ref_9_95").css("background-color", "red");
+                        changeColorType9 = "Ref_9_95"
+                        changeColorText9 = "Ref_9"
+                    }
+                    type9 = "Gas95"
+                }
+            });
+            
+            $(".selectedType10").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_10_E20")
+                {
+                    if(changeColorType10 == "" && changeColorText10 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_10")
+                        {
+                            $("#Ref_10").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_10").css("background-color", "yellow");
+                        }
+                        $("#Ref_10_E20").css("background-color", "red");
+                        changeColorType10 = "Ref_10_E20"
+                        changeColorText10 = "Ref_10"
+                    }
+                    else if(changeColorType10 == "Ref_10_E20" && changeColorText10 == "Ref_10")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_10")
+                        {
+                            $("#Ref_10").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_10").css("background-color", "yellow");
+                        }
+                        $("#Ref_10_E20").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText10).css("background-color", "greenyellow");
+                        $("#"+changeColorType10).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_10")
+                        {
+                            $("#Ref_10").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_10").css("background-color", "yellow");
+                        }
+                        $("#Ref_10_E20").css("background-color", "red");
+                        changeColorType10 = "Ref_10_E20"
+                        changeColorText10 = "Ref_10"
+                    }
+                    type10 = "E20"
+                }
+                else if(typeID == "Ref_10_91")
+                {
+                    if(changeColorType10 == "" && changeColorText10 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_10")
+                        {
+                            $("#Ref_10").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_10").css("background-color", "yellow");
+                        }
+                        $("#Ref_10_91").css("background-color", "red");
+                        changeColorType10 = "Ref_10_91"
+                        changeColorText10 = "Ref_10"
+                    }
+                    else if(changeColorType10 == "Ref_10_91" && changeColorText10 == "Ref_10")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_10")
+                        {
+                            $("#Ref_10").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_10").css("background-color", "yellow");
+                        }
+                        $("#Ref_10_91").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText10).css("background-color", "greenyellow");
+                        $("#"+changeColorType10).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_10")
+                        {
+                            $("#Ref_10").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_10").css("background-color", "yellow");
+                        }
+                        $("#Ref_10_91").css("background-color", "red");
+                        changeColorType10 = "Ref_10_91"
+                        changeColorText10 = "Ref_10"
+                    }
+                    type10 = "Gas91"
+                }
+                else if(typeID == "Ref_10_95")
+                {
+                    if(changeColorType10 == "" && changeColorText10 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_10")
+                        {
+                            $("#Ref_10").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_10").css("background-color", "yellow");
+                        }
+                        $("#Ref_10_95").css("background-color", "red");
+                        changeColorType10 = "Ref_10_95"
+                        changeColorText10 = "Ref_10"
+                    }
+                    else if(changeColorType10 == "Ref_10_95" && changeColorText10 == "Ref_10")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_10")
+                        {
+                            $("#Ref_10").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_10").css("background-color", "yellow");
+                        }
+                        $("#Ref_10_95").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText10).css("background-color", "greenyellow");
+                        $("#"+changeColorType10).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_10")
+                        {
+                            $("#Ref_10").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_10").css("background-color", "yellow");
+                        }
+                        $("#Ref_10_95").css("background-color", "red");
+                        changeColorType10 = "Ref_10_95"
+                        changeColorText10 = "Ref_10"
+                    }
+                    type10 = "Gas95"
+                }
+            });
+            
+            $(".selectedType11").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_11_Diesel")
+                {
+                    if(changeColorType11 == "" && changeColorText11 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_11")
+                        {
+                            $("#Ref_11").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_11").css("background-color", "yellow");
+                        }
+                        $("#Ref_11_Diesel").css("background-color", "red");
+                        changeColorType11 = "Ref_11_Diesel"
+                        changeColorText11 = "Ref_11"
+                    }
+                    else if(changeColorType11 == "Ref_11_Diesel" && changeColorText11 == "Ref_11")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_11")
+                        {
+                            $("#Ref_11").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_11").css("background-color", "yellow");
+                        }
+                        $("#Ref_11_Diesel").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText11).css("background-color", "greenyellow");
+                        $("#"+changeColorType11).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_11")
+                        {
+                            $("#Ref_11").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_11").css("background-color", "yellow");
+                        }
+                        $("#Ref_11_Diesel").css("background-color", "red");
+                        changeColorType11 = "Ref_11_Diesel"
+                        changeColorText11 = "Ref_11"
+                    }
+                    type11 = "Diesel"
+                }
+                else if(typeID == "Ref_11_DieselPlus")
+                {
+                    if(changeColorType11 == "" && changeColorText11 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_11")
+                        {
+                            $("#Ref_11").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_11").css("background-color", "yellow");
+                        }
+                        $("#Ref_11_DieselPlus").css("background-color", "red");
+                        changeColorType11 = "Ref_11_DieselPlus"
+                        changeColorText11 = "Ref_11"
+                    }
+                    else if(changeColorType11 == "Ref_11_DieselPlus" && changeColorText11 == "Ref_11")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_11")
+                        {
+                            $("#Ref_11").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_11").css("background-color", "yellow");
+                        }
+                        $("#Ref_11_DieselPlus").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText11).css("background-color", "greenyellow");
+                        $("#"+changeColorType11).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_11")
+                        {
+                            $("#Ref_11").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_11").css("background-color", "yellow");
+                        }
+                        $("#Ref_11_DieselPlus").css("background-color", "red");
+                        changeColorType11 = "Ref_11_DieselPlus"
+                        changeColorText11 = "Ref_11"
+                    }
+                    type11 = "DieselPlus"
+                }
+            });
+            
+            $(".selectedType12").click(function(){
+                typeID = this.id
+                if(typeID == "Ref_12_Diesel")
+                {
+                    if(changeColorType12 == "" && changeColorText12 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_12")
+                        {
+                            $("#Ref_12").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_12").css("background-color", "yellow");
+                        }
+                        $("#Ref_12_Diesel").css("background-color", "red");
+                        changeColorType12 = "Ref_12_Diesel"
+                        changeColorText12 = "Ref_12"
+                    }
+                    else if(changeColorType12 == "Ref_12_Diesel" && changeColorText12 == "Ref_12")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_12")
+                        {
+                            $("#Ref_12").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_12").css("background-color", "yellow");
+                        }
+                        $("#Ref_12_Diesel").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText12).css("background-color", "greenyellow");
+                        $("#"+changeColorType12).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_12")
+                        {
+                            $("#Ref_12").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_12").css("background-color", "yellow");
+                        }
+                        $("#Ref_12_Diesel").css("background-color", "red");
+                        changeColorType12 = "Ref_12_Diesel"
+                        changeColorText12 = "Ref_12"
+                    }
+                    type12 = "Diesel"
+                }
+                else if(typeID == "Ref_12_DieselPlus")
+                {
+                    if(changeColorType12 == "" && changeColorText12 == "")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_12")
+                        {
+                            $("#Ref_12").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_12").css("background-color", "yellow");
+                        }
+                        $("#Ref_12_DieselPlus").css("background-color", "red");
+                        changeColorType12 = "Ref_12_DieselPlus"
+                        changeColorText12 = "Ref_12"
+                    }
+                    else if(changeColorType12 == "Ref_12_DieselPlus" && changeColorText12 == "Ref_12")
+                    {
+                        if(pumpPaying == "" || pumpPaying != "Ref_12")
+                        {
+                            $("#Ref_12").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_12").css("background-color", "yellow");
+                        }
+                        $("#Ref_12_DieselPlus").css("background-color", "red");
+                    }
+                    else
+                    {
+                        $("#"+changeColorText12).css("background-color", "greenyellow");
+                        $("#"+changeColorType12).css("background-color", "whitesmoke");
+                        if(pumpPaying == "" || pumpPaying != "Ref_12")
+                        {
+                            $("#Ref_12").css("background-color", "red");
+                        }
+                        else
+                        {
+                            $("#Ref_12").css("background-color", "yellow");
+                        }
+                        $("#Ref_12_DieselPlus").css("background-color", "red");
+                        changeColorType12 = "Ref_12_DieselPlus"
+                        changeColorText12 = "Ref_12"
+                    }
+                    type12 = "DieselPlus"
+                }
+            });
+            
+            $("#Ref_1").click(function(){
+                if(changeColorType1 != "" && changeColorText1 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_1")
+                    {
+                        pumpPaying = "Ref_1"
+                        $("#Ref_1").text("1 (paying)");
+                        $("#Ref_1").css("background-color", "yellow");
+                        type = type1
+                    }
+                }
+            });
+            
+            $("#Ref_2").click(function(){
+                if(changeColorType2 != "" && changeColorText2 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_2")
+                    {
+                        pumpPaying = "Ref_2"
+                        $("#Ref_2").text("2 (paying)");
+                        $("#Ref_2").css("background-color", "yellow");
+                        type = type2
+                    }
+                }
+            });
+            
+            $("#Ref_3").click(function(){
+                if(changeColorType3 != "" && changeColorText3 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_3")
+                    {
+                        pumpPaying = "Ref_3"
+                        $("#Ref_3").text("3 (paying)");
+                        $("#Ref_3").css("background-color", "yellow");
+                        type = type3
+                    }
+                }
+            });
+            
+            $("#Ref_4").click(function(){
+                if(changeColorType4 != "" && changeColorText4 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_4")
+                    {
+                        pumpPaying = "Ref_4"
+                        $("#Ref_4").text("4 (paying)");
+                        $("#Ref_4").css("background-color", "yellow");
+                        type = type4
+                    }
+                }
+            });
+            
+            $("#Ref_5").click(function(){
+                if(changeColorType5 != "" && changeColorText5 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_5")
+                    {
+                        pumpPaying = "Ref_5"
+                        $("#Ref_5").text("5 (paying)");
+                        $("#Ref_5").css("background-color", "yellow");
+                        type = type5
+                    }
+                }
+            });
+            
+            $("#Ref_6").click(function(){
+                if(changeColorType6 != "" && changeColorText6 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_6")
+                    {
+                        pumpPaying = "Ref_6"
+                        $("#Ref_6").text("6 (paying)");
+                        $("#Ref_6").css("background-color", "yellow");
+                        type = type6
+                    }
+                }
+            });
+            
+            $("#Ref_7").click(function(){
+                if(changeColorType7 != "" && changeColorText7 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_7")
+                    {
+                        pumpPaying = "Ref_7"
+                        $("#Ref_7").text("7 (paying)");
+                        $("#Ref_7").css("background-color", "yellow");
+                        type = type7
+                    }
+                }
+            });
+            
+            $("#Ref_8").click(function(){
+                if(changeColorType8 != "" && changeColorText8 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_8")
+                    {
+                        pumpPaying = "Ref_8"
+                        $("#Ref_8").text("8 (paying)");
+                        $("#Ref_8").css("background-color", "yellow");
+                        type = type8
+                    }
+                }
+            });
+            
+            $("#Ref_9").click(function(){
+                if(changeColorType9 != "" && changeColorText9 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_9")
+                    {
+                        pumpPaying = "Ref_9"
+                        $("#Ref_9").text("9 (paying)");
+                        $("#Ref_9").css("background-color", "yellow");
+                        type = type9
+                    }
+                }
+            });
+            
+            $("#Ref_10").click(function(){
+                if(changeColorType10 != "" && changeColorText10 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_10")
+                    {
+                        pumpPaying = "Ref_10"
+                        $("#Ref_10").text("10 (paying)");
+                        $("#Ref_10").css("background-color", "yellow");
+                        type = type10
+                    }
+                }
+            });
+            
+            $("#Ref_11").click(function(){
+                if(changeColorType11 != "" && changeColorText11 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_11")
+                    {
+                        pumpPaying = "Ref_11"
+                        $("#Ref_11").text("11 (paying)");
+                        $("#Ref_11").css("background-color", "yellow");
+                        type = type11
+                    }
+                }
+            });
+            
+            $("#Ref_12").click(function(){
+                if(changeColorType12 != "" && changeColorText12 != "")
+                {
+                    if(pumpPaying == "" || pumpPaying == "Ref_12")
+                    {
+                        pumpPaying = "Ref_12"
+                        $("#Ref_12").text("12 (paying)");
+                        $("#Ref_12").css("background-color", "yellow");
+                        type = type12
+                    }
+                }
+            });
+      
+            $("#Enter").click(function(){
+                $("#mainSelect").hide();
+                $("#paymentSelect").show();
+                //$("#typeSelect").show();
+            });
+                
+            $("#C").click(function()
+            {
+                $("#textField").html("0");
+            });
+            
+            $("#Clear").click(function()
+            {
+                var current = $("#textField").html();
+                if(current != "0")
+                {
+                    if(current.length == 1)
+                    {
+                        $("#textField").html("0");
+                    }
+                    else
+                    {
+                        $("#textField").html(current.substr(0,current.length-1));
+                    }
+                }
+            });
+            
+            $(".calBut").click(function(){
+                var current = $("#textField").html();
+                if(current.length < 12)
+                {
+                    if(current == "0" && this.id != "dotCal")
+                    {
+                        $("#textField").html(this.id);
+                    }
+                   else if(this.id == "dotCal" && checkDot)
+                   {
+                        $("#textField").html(current+".");
+                        checkDot = false;
+                   }
+                   else if(this.id != "dotCal")
+                   {
+                       $("#textField").html(current+this.id);
+                   }
+                }
+                else
+                {
+                    alert("ERROR");
+                }
+            });
+            
+        </script>
+    </body>
+</html>
